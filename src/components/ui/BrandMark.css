@@ -1,0 +1,11 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: -.03em;
+}
+.brand__mark { width: 34px; height: 34px; }
+.brand__mark path { fill: none; stroke: var(--primary); stroke-width: 2.5; }
+.brand__mark circle { fill: var(--primary); }

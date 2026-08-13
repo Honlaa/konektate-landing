@@ -1,0 +1,20 @@
+.audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.audience-panel { padding: 34px; border-radius: var(--radius-lg); overflow: hidden; }
+.audience-panel--blue { background: #e9f1ff; }
+.audience-panel--green { background: #e8f9f2; }
+.audience-panel__tag {
+  font-size: .8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.audience-panel h3 {
+  max-width: 500px;
+  font-size: 1.8rem;
+  line-height: 1.15;
+  letter-spacing: -.03em;
+}
+.mini-grid { display: grid; gap: 12px; }
+.mini-grid .info-card { background: rgba(255,255,255,.76); box-shadow: none; }
+@media (max-width: 900px) { .audience-grid { grid-template-columns: 1fr; } }
+@media (max-width: 620px) { .audience-panel { padding: 22px; } }

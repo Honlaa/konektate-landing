@@ -1,0 +1,74 @@
+.preview-layout {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 70px;
+  align-items: start;
+}
+.preview-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 14px;
+  border-radius: 13px;
+  color: var(--primary);
+  background: rgba(53,109,243,.08);
+  font-weight: 800;
+  font-size: .9rem;
+}
+.preview-stack { min-height: 490px; position: relative; }
+.preview-card {
+  position: absolute;
+  width: min(100%, 380px);
+  padding: 28px;
+  border-radius: 34px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: white;
+}
+.preview-card--back {
+  right: 60px;
+  top: 0;
+  min-height: 230px;
+  background: var(--navy);
+  color: white;
+  transform: rotate(5deg);
+}
+.preview-card--back svg { color: var(--cyan); }
+.preview-card--back span, .preview-card--back strong { display: block; margin-top: 16px; }
+.preview-card--back span { color: #8fa6c1; }
+.preview-card--front { left: 0; bottom: 0; min-height: 330px; }
+.preview-card__top { display: flex; justify-content: space-between; color: var(--primary); font-weight: 900; }
+.provider-row { display: flex; align-items: center; gap: 13px; padding: 18px 0; }
+.avatar {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  background: #dfe9ff;
+  color: var(--primary);
+  font-weight: 900;
+}
+.provider-row div:nth-child(2) { display: grid; }
+.provider-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--ink-muted);
+  font-size: .88rem;
+}
+.preview-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.preview-meta span { display: inline-flex; align-items: center; gap: 6px; font-weight: 800; font-size: .88rem; }
+.preview-meta svg { width: 16px; color: var(--primary); }
+@media (max-width: 900px) { .preview-layout { grid-template-columns: 1fr; gap: 40px; } }
+@media (max-width: 620px) {
+  .preview-stack { min-height: 430px; }
+  .preview-card--back { right: 0; }
+  .preview-meta { flex-direction: column; }
+}

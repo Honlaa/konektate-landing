@@ -1,0 +1,16 @@
+.faq-layout {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 70px;
+  align-items: start;
+}
+.faq-list { display: grid; gap: 10px; }
+.faq-list details {
+  padding: 20px 22px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.faq-list summary { cursor: pointer; font-weight: 900; }
+.faq-list p { margin: 12px 0 0; color: var(--ink-muted); }
+@media (max-width: 900px) { .faq-layout { grid-template-columns: 1fr; gap: 40px; } }
